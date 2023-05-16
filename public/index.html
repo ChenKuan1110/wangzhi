@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>望知先生</title>
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="container">
+  <form id="form" class="form mt-2">
+    <div class="input-group">
+      <input id="input_no" type="text" class="form-control" placeholder="请输入望知先生设备码" />
+      <button id="btn" class="btn btn-primary" type="btutton">启动设备</button>
+    </div>
+  </form>
+  <!-- 加载文字 -->
+  <section id="loading">
+    <div class="loading mt-4 text-primary text-center">诊断中</div>
+  </section>
+  <!-- 结果 -->
+  <section id="result" class="mt-3"></section>
+  <!-- 步骤 -->
+  <div class="accordion mt-4" id="step">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-step">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep" aria-expanded="true" aria-controls="collapseStep">
+          望知先生诊断操作步骤
+        </button>
+      </h2>
+      <div id="collapseStep" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <p class="card-text">1. 输入设备编号</p>
+          <p class="card-text">2. 等待设备启动</p>
+          <p class="card-text">3. 设备启动后，请伸出您的舌头，等待设备采集您的舌苔信息</p>
+          <p class="card-text">4. 信息采集完成后，设备将分析您的舌像信息，稍后您将在该页面中查看到您的诊断结果</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="mt-4 text-center p-4 bg-primary text-white footer">
+    @copyright 望知先生 2023
+  </footer>
+</body>
+<script src="./main.js"></script>
+</html>

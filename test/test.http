@@ -1,0 +1,34 @@
+### 启动设备
+get http://192.168.10.115:8999/tongue_public/equipment/start?id=11223344&openId=fake_openid
+
+
+### 状态
+get http://192.168.10.115:8999/tongue_public/equipment/result?id=11223344&openId=fake_openid
+
+
+### 公众号 co-wechat 
+get http://localhost:3001/wx/wechat?signature=b3df839c53d6884f86ba123e0e0a0665731a290a&echostr=8526463064474320774&timestamp=1684205444&nonce=806093144
+
+
+### 测试号 access_token 获取
+@appid=wxea4c1a271d231129
+@secret=bff305946858377c27317fa6bc02d99d
+get https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={{appid}}&secret={{secret}}
+
+
+### 测试号 菜单设置
+@token=68_d9LPShgAh5-MOwmIw58yEWtnAfGH_h87fZdHGVecyjtqauoH3et-lVWEQcsnFai1I1E5uLUzK0MnTxew23stI2kexYDZkyZgYqGDsSBn-nYLLWzn3kfC91ltyDQMYOaAJAFRH
+
+POST https://api.weixin.qq.com/cgi-bin/menu/create?access_token={{token}}
+Content-Type: application/json
+
+{
+  "button":[
+    {	
+      "type":"view",
+      "name":"我要体验",
+      "key": "start",
+      "url": "https://bef6-171-221-82-189.ngrok-free.app/index.html"
+    }
+  ]
+}
