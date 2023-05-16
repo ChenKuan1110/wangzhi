@@ -1,8 +1,8 @@
+// 数据库中间件
 import sqlite3 from 'sqlite3'
 import { open } from 'sqlite'
 import { DB_DIR } from '../config/index.js'
 
-console.log(DB_DIR)
 
 async function initDB () {
   try {
@@ -16,4 +16,10 @@ async function initDB () {
   }
 }
 
-export default initDB
+export default function (app) {
+  app.use(async (ctx, next) => {
+    const db = initDB()
+    app.context.db = db
+    await next()
+  })
+}
