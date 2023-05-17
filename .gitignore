@@ -19,3 +19,6 @@ tests/**/coverage/
 # config
 
 
+# 测试
+test/**
+

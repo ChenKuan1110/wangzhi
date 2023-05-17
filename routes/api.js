@@ -21,8 +21,9 @@ async function fetchToken () {
   console.log('API 请求获取 token')
   // 请求
   const url = GET_ACCESS_TOKEN_URL.replace('APPID', APPID).replace('APPSECRET', APPSCRET)
-  const {data} = await axios.get(url)
-  const { access_token:token } = data
+  const { data } = await axios.get(url)
+  console.log(data)
+  const { access_token: token } = data
   // 保存到文件
   saveToFile(token)
   return token

@@ -17,7 +17,7 @@ get https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={
 
 
 ### 测试号 菜单设置
-@token=68_d9LPShgAh5-MOwmIw58yEWtnAfGH_h87fZdHGVecyjtqauoH3et-lVWEQcsnFai1I1E5uLUzK0MnTxew23stI2kexYDZkyZgYqGDsSBn-nYLLWzn3kfC91ltyDQMYOaAJAFRH
+@token=68_N8_oH1aCaPRlbdQtUGvAbvEf6Y6u-DvFAKmzZvSB7LOAMeVEYt4XBm7vPv3d4qJySc8SIOlZMc3ipngYg_z86J5nCYPvIX1LIbugWhC5kpo4J9FS46Jpkgl_100QYLhAIABJW
 
 POST https://api.weixin.qq.com/cgi-bin/menu/create?access_token={{token}}
 Content-Type: application/json
@@ -28,7 +28,29 @@ Content-Type: application/json
       "type":"view",
       "name":"我要体验",
       "key": "start",
-      "url": "https://bef6-171-221-82-189.ngrok-free.app/index.html"
+      "url": "https://www.fengyenongye.cn/wangzhi_wx/index.html"
+    }
+  ]
+}
+
+### 真实号
+@appid1=wxe612c154760180a2
+@secret1=c963df09303ec637552c443779acfcb1
+get https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={{appid1}}&secret={{secret1}}
+
+
+### 真实号修改菜单
+@token1=68_m4v83S2iTILLLrV3pbL7yclz7rO9Ql8HieBAOf0g7MuNOnkarkcBt0CWIBgp3rLm5FE-mE0xLpBJk3xfirfsm1DFi4Ov55Cn9mwqIZAKja9yTLJaEqc8bJDXfNEPAHeACADOV
+POST https://api.weixin.qq.com/cgi-bin/menu/create?access_token={{token1}}
+Content-Type: application/json
+
+{
+  "button":[
+    {	
+      "type":"view",
+      "name":"我要体验",
+      "key": "start",
+      "url": "https://www.fengyenongye.cn/wangzhi_wx/index.html"
     }
   ]
 }

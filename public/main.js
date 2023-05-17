@@ -8,7 +8,7 @@ let queryTimerId = null // 轮询定时器
 //   const params = new URLSearchParams(queryString);
 //   const code = params.get("code");
 //   console.log("code=", code);
-//   const resp = await fetch("/page/config", {
+//   const resp = await fetch("/wangzhi_wx/page/config", {
 //     method: "POST",
 //     headers: {
 //       ContentType: "application/json;charset=utf-8",
@@ -43,7 +43,7 @@ function showAlert(message, className = "danger", clearable = true) {
 }
 
 async function sendCode(code) {
-  const resp = await fetch("/page/code", {
+  const resp = await fetch("/wangzhi_wx/page/code", {
     method: "POST",
     body: JSON.stringify({
       code: code,
@@ -78,7 +78,7 @@ async function sendCode(code) {
 async function queryResult (code, uid) {
   console.log('查询结果：')
   queryTimerId = setInterval(async () => {
-    const resp = await fetch(`/page/result?no=${code}&uid=${uid}`, {
+    const resp = await fetch(`/wangzhi_wx/page/result?no=${code}&uid=${uid}`, {
       method: 'GET',
     })
     const res = await resp.json()
