@@ -25,6 +25,16 @@ https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa803340de403a050&red
 
 
 
+## TODO
+
+* [ ] 使用 .env 替代配置文件
+* [ ] 更新对微信接口的错误处理
+* [ ] 统一接口消息格式
+* [ ] 增加对外借口鉴权
+* [ ] 网页授权功能
+
+
+
 ## 更新记录
 
 2023.05.16
